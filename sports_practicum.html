@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Analytics Practicum</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f3f4f6;
+    }
+  </style>
+</head>
+<body class="p-6">
+  <h1 class="text-3xl font-bold text-indigo-900 mb-4">Sports Analytics Practicum</h1>
+  <p class="text-gray-600 mb-4">Predicted NBA targets and evaluated Charlotte FC and Panthers’ metrics.</p>
+  <div class="w-full max-w-2xl mx-auto">
+    <canvas id="sportsChart"></canvas>
+  </div>
+  <a href="../index.html" class="mt-6 inline-block bg-fuchsia-500 text-white px-4 py-2 rounded-full hover:bg-fuchsia-600">Back to Portfolio</a>
+
+  <script>
+    const ctx = document.getElementById('sportsChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Dalton Knecht', 'Jack McGlynn', 'Panthers'],
+        datasets: [{
+          label: 'Performance Metric',
+          data: [57.8, 0.22, 1.5], // Placeholder data
+          backgroundColor: 'rgba(244, 63, 94, 0.6)',
+          borderColor: 'rgba(244, 63, 94, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: { y: { beginAtZero: true } },
+        plugins: { legend: { labels: { color: '#1e1b4b' } } }
+      }
+    });
+  </script>
+</body>
+</html>

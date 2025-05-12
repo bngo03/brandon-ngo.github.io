@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decoding Diabetes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f3f4f6;
+    }
+  </style>
+</head>
+<body class="p-6">
+  <h1 class="text-3xl font-bold text-indigo-900 mb-4">Decoding Diabetes</h1>
+  <p class="text-gray-600 mb-4">Random Forest model (78% accuracy) predicting diabetes with glucose and BMI as key predictors.</p>
+  <div class="w-full max-w-2xl mx-auto">
+    <canvas id="diabetesChart"></canvas>
+  </div>
+  <a href="../index.html" class="mt-6 inline-block bg-fuchsia-500 text-white px-4 py-2 rounded-full hover:bg-fuchsia-600">Back to Portfolio</a>
+
+  <script>
+    const ctx = document.getElementById('diabetesChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Glucose', 'BMI', 'Age', 'Insulin'],
+        datasets: [{
+          label: 'Importance Score',
+          data: [0.30, 0.20, 0.15, 0.10], // Placeholder data
+          backgroundColor: 'rgba(79, 70, 229, 0.6)',
+          borderColor: 'rgba(79, 70, 229, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: { y: { beginAtZero: true } },
+        plugins: { legend: { labels: { color: '#1e1b4b' } } }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syracuse Basketball Analytics</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f3f4f6;
+    }
+  </style>
+</head>
+<body class="p-6">
+  <h1 class="text-3xl font-bold text-indigo-900 mb-4">Syracuse Basketball Analytics</h1>
+  <p class="text-gray-600 mb-4">Shot quality metric and regression for high-efficiency plays (>1.13 points/possession).</p>
+  <div class="w-full max-w-2xl mx-auto">
+    <canvas id="basketballChart"></canvas>
+  </div>
+  <a href="../index.html" class="mt-6 inline-block bg-fuchsia-500 text-white px-4 py-2 rounded-full hover:bg-fuchsia-600">Back to Portfolio</a>
+
+  <script>
+    const ctx = document.getElementById('basketballChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Ball Screen', 'Initiation', 'Perimeter'],
+        datasets: [{
+          label: 'Points per Possession',
+          data: [1.13, 1.10, 1.05], // Placeholder data
+          borderColor: 'rgba(139, 92, 246, 1)',
+          backgroundColor: 'rgba(139, 92, 246, 0.2)',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        scales: { y: { beginAtZero: true } },
+        plugins: { legend: { labels: { color: '#1e1b4b' } } }
+      }
+    });
+  </script>
+</body>
+</html>
