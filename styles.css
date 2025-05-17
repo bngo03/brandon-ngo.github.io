@@ -1,0 +1,60 @@
+/* Base page styling */
+body {
+  background: url('images/website-banner.avif') no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #f1f5f9; /* light text for readability over dark image */
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Section overlays */
+section {
+  background-color: transparent;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin: 0 auto;
+  color: #f1f5f9; /* keep text readable over mountain image */
+}
+
+
+/* Optional container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Specific section spacing */
+#about {
+  margin-bottom: 2rem;
+}
+
+#projects {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+/* Footer styling */
+footer {
+  background-color: transparent;
+  color: #f1f5f9;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+/* Mobile spacing adjustments */
+@media (max-width: 768px) {
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  #about {
+    margin-bottom: 1rem;
+  }
+}

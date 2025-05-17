@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brandon Ngo - Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -11,7 +11,7 @@
       font-family: 'Poppins', sans-serif;
     }
     .gradient-bg {
-      background: linear-gradient(135deg, #4f46e5, #06b6d4);
+      background: url(images/website-banner.avif) center/cover no-repeat;
     }
     .card-hover {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -44,14 +44,14 @@
       width: 100%;
     }
   </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-50">
-
   <!-- Hero Section -->
-  <header class="gradient-bg text-white py-16">
+  <header class="text-white py-16">
     <div class="container mx-auto text-center px-4">
       <h1 class="text-5xl font-bold mb-4">Brandon Ngo</h1>
-      <p class="text-xl mb-6">Computer Science and Data Science Enthusiast</p>
+      <p class="text-xl mb-6">Aspiring Data Scientist with a Computer Science Foundation</p>
       <a href="#projects" class="bg-fuchsia-500 text-white px-6 py-3 rounded-full hover:bg-fuchsia-600 transition">Explore My Work</a>
     </div>
   </header>
@@ -66,17 +66,21 @@
   </nav>
 
   <!-- About Section -->
-  <section id="about" class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center text-indigo-900 mb-8">About Me</h2>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto text-center">
-        I'm a senior at UNC Charlotte, pursuing a B.S. in Computer Science with a focus on Data Science and a Certificate in Sports Analytics. With internships at Charlotte 49ers and One Elevate, I use Python, R, and SQL to uncover insights in healthcare and sports data. Passionate about turning data into actionable strategies!
-      </p>
-    </div>
-  </section>
+<section id="about" class="py-20 text-white text-center">
+  <div class="max-w-4xl mx-auto px-6 py-8 text-center">
+    <h2 class="text-4xl font-bold mb-6 drop-shadow-md">About Me</h2>
+    <p class="text-lg leading-relaxed drop-shadow-sm">
+      I’m a senior at UNC Charlotte pursuing a B.S. in Computer Science with a concentration in Data Science and a Certificate in Sports Analytics.
+      Through internships with the Charlotte 49ers and One Elevate, I’ve applied Python, R, and SQL to extract meaningful insights from complex healthcare and sports datasets.
+      I’m passionate about transforming data into actionable strategies that drive performance, decision-making, and innovation.
+    </p>
+  </div>
+</section>
+
+
 
   <!-- Projects Section -->
-  <section id="projects" class="py-16 bg-gray-100">
+  <section id="projects" class="py-16">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center text-indigo-900 mb-12">Projects</h2>
       <div id="project-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
@@ -84,12 +88,15 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-16 bg-white">
+  <section id="contact" class="py-16 bg-white text-black">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-4xl font-bold text-indigo-900 mb-8">Get in Touch</h2>
       <p class="text-lg text-gray-600 mb-6">
-        Interested in collaborating or discussing opportunities? Reach out!
+         I'm open to opportunities in data science, analytics, or collaborative projects. Feel free to reach out:
       </p>
+      <p class="text-lg font-medium mb-2">📧 Email: bdngo03@gmail.com</p>
+      <p class="text-lg font-medium mb-2">💼 LinkedIn: linkedin.com/in/brandon-ngo-a26653224</p>
+      <p class="text-lg font-medium mb-6">🐙 GitHub: github.com/bngo03</p>
       <div class="flex justify-center space-x-6">
         <a href="mailto:bdngo03@gmail.com" class="text-fuchsia-500 hover:text-fuchsia-600 text-lg">Email</a>
         <a href="https://www.linkedin.com/in/brandon-ngo-a26653224" class="text-fuchsia-500 hover:text-fuchsia-600 text-lg">LinkedIn</a>
@@ -105,7 +112,67 @@
     </div>
   </footer>
 
-  <!-- Connect JS File -->
-  <script src="js/script.js" defer></script>
+  <!-- JavaScript for Dynamic Projects -->
+<script>
+const projects = [
+  {
+    title: "Decoding Diabetes",
+    description: `Built a Random Forest model (78% accuracy) to predict diabetes and identify glucose and BMI as top predictors.<br><strong>Tools:</strong> Python, Scikit-learn, Pandas, Matplotlib`,
+    image: "images/decoding_diabetes.jpg",
+    link: "https://docs.google.com/document/d/1fVuw0bk5Q614IOXXhRGpoXtZF2KH4050fyRUbb7Yu34/edit?usp=sharing"
+  },
+  {
+    title: "Mutual Funds & ETFs Analysis",
+    description: `Analyzed 24,239 funds with regression (R² = 0.62) and K-means clustering to identify top ETFs by Sharpe ratio.<br><strong>Tools:</strong> Python, Pandas, Scikit-learn, Seaborn`,
+    image: "images/mutual_funds_etfs.jpg",
+    link: "https://docs.google.com/document/d/1UGiIM6QarmcWtZ-K0kxcaPVxAwEFkbGX8BirSc57cfc/edit?tab=t.0"
+  },
+  {
+    title: "Clustering Student Habits",
+    description: `Used K-means and hierarchical clustering to group students and reveal GPA trends based on habits like screen time and study hours.<br><strong>Tools:</strong> Python, Scikit-learn, Pandas, Seaborn`,
+    image: "images/student_clustering.jpg",
+    link: "https://docs.google.com/document/d/101cfs2vLLPR_v8WRPJh7uaQ-Z7qE1HGKj68zGFBZgPU/edit?tab=t.0"
+  },
+  {
+    title: "Sports Analytics Practicum",
+    description: `Predicted NBA draft prospects and analyzed team metrics for Charlotte FC and the Panthers to guide roster decisions.<br><strong>Tools:</strong> R, SQL, ggplot2, dplyr`,
+    image: "images/sports_practicum.png",
+    link: "https://github.com/bngo03/sports-practicum"
+  },
+  {
+    title: "Syracuse Basketball Analytics",
+    description: `Created a shot quality metric and applied regression to identify efficient plays across NCAA teams like Utah and Minnesota.<br><strong>Tools:</strong> Python, Pandas, Scikit-learn, Matplotlib`,
+    image: "images/syracuse_basketball.png",
+    link: "https://docs.google.com/presentation/d/1dSx8HUyLFQrnyoeIoT0dthAUBXhgbNJe/edit?usp=sharing&ouid=105146035983597713987&rtpof=true&sd=true"
+  },
+  {
+    title: "Postseason Predictor - NCAA Basketball",
+    description: `Built a Random Forest model (85% accuracy) to predict postseason appearances using team stats like ADJOE, ADJDE, and win count.<br><strong>Tools:</strong> Python, Scikit-learn, Pandas, LabelEncoder`,
+    image: "images/ncaa_postseason.jpeg",
+    link: "https://docs.google.com/document/d/1paORt10RVnhgxwH1uwiQ44OIXyDZoGoC4rAcysEij04/edit?tab=t.0#heading=h.7z2v9wl0wiol"
+  },
+  {
+    title: "NBA Advanced Stats Impact",
+    description: `Analyzed PER, USG%, and Win Shares to evaluate player performance by position and team over multiple seasons.<br><strong>Tools:</strong> Python, Pandas, Matplotlib, Seaborn`,
+    image: "images/nba_stats.jpg",
+    link: "https://docs.google.com/document/d/1yGlO9Jf6ta2fyT5cFECg6OF_kB7RronoEPaWSA0L2UA/edit?tab=t.0#heading=h.j06veijrzsjf"
+  }
+];
+
+
+  const projectContainer = document.getElementById('project-container');
+  projects.forEach(project => {
+    const projectCard = document.createElement('div');
+    projectCard.className = 'bg-white p-6 rounded-xl shadow-lg card-hover fade-in';
+    projectCard.innerHTML = `
+      <img src="${project.image}" alt="${project.title}" class="w-full h-48 object-cover rounded-lg mb-4">
+      <h3 class="text-2xl font-semibold text-indigo-900">${project.title}</h3>
+      <p class="text-gray-600 mt-2">${project.description}</p>
+      <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="mt-4 inline-block bg-fuchsia-500 text-white px-4 py-2 rounded-full hover:bg-fuchsia-600 transition">View Project</a>
+    `;
+    projectContainer.appendChild(projectCard);
+  });
+</script>
+
 </body>
 </html>

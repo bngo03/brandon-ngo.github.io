@@ -1,33 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const projectContainer = document.getElementById('project-container');
-
   const projects = [
     {
       title: "Decoding Diabetes",
       description: "Built a Random Forest model (78% accuracy) to predict diabetes from a 768-patient dataset. Highlighted glucose and BMI as key predictors using Python and Scikit-learn.",
       image: "images/decoding_diabetes.jpg",
-      link: "https://github.com/bngo03/decoding-diabetes"
+      link: "https://docs.google.com/document/d/1fVuw0bk5Q614IOXXhRGpoXtZF2KH4050fyRUbb7Yu34/edit?usp=sharing"
+
     },
     {
       title: "Mutual Funds & ETFs Analysis",
       description: "Analyzed 24,239 funds with regression (R²=0.62) and K-means clustering to identify top ETFs. Recommended Vanguard S&P 500 ETF for its high Sharpe ratio.",
       image: "images/mutual_funds_etfs.jpg",
-      link: "https://github.com/bngo03/mutual-funds-etfs"
+      link: "projects/mutual_funds_etfs.html"
     },
     {
       title: "Syracuse Basketball Analytics",
       description: "Created a shot quality metric and used regression to pinpoint high-efficiency plays (>1.13 points/possession) for Utah and Minnesota’s strategies.",
-      image: "images/syracuse_basketball.png",
-      link: "https://github.com/bngo03/syracuse-basketball"
+      image: "images/syracuse_basketball.jpg",
+      link: "projects/syracuse_basketball.html"
     },
     {
       title: "Sports Analytics Practicum",
       description: "Predicted NBA draft targets (e.g., Dalton Knecht) and evaluated Charlotte FC and Panthers’ metrics to guide roster decisions using R and SQL.",
-      image: "images/sports_practicum.png",
-      link: "https://github.com/bngo03/sports-practicum"
+      image: "images/sports_practicum.jpg",
+      link: "projects/sports_practicum.html"
     }
   ];
 
+  const projectContainer = document.getElementById('project-container');
   projects.forEach(project => {
     const projectCard = document.createElement('div');
     projectCard.className = 'bg-white p-6 rounded-xl shadow-lg card-hover fade-in';
